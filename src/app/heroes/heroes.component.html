@@ -1,0 +1,21 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
+<!--<app-hero-detail [hero]="selectedHero"></app-hero-detail>-->
+<!--<h3>Einfacher Text, welcher angezeigt werden soll mit h3</h3>
+<h4>Einfacher Text welcher einfach nur so angezeigt werden soll. Mit h4 versteht sich</h4>
+<h5>h5 scheint es auch noch zu geben.</h5>
+<h6>h6 gibt es auch noch, so langsam wirds schwer das hier noch zu lesen.</h6>
+h7 gibt es nicht mehr, ist auch unnötig.
+<div>"Ein einfacher String mit den abostroffen" und in div klammerung, damit dieser Satz in einer extra Zeile ist.</div>-->
+<!--an die app hero-detail wird in die variable hero, die selectedHero variable übergeben-->
+
+<!--[class.selected]="hero === selectedHero" class.selected wird angewendet auf das aktuelle element, wenn die bedingung true ist,
+also wenn hero = selectedHero
+[class.my-class]="expression"
+adds (or removes) the CSS class my-class to (or from) the element depending on whether expression results in true or false-->

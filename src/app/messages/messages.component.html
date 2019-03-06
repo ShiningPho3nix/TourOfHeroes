@@ -1,0 +1,12 @@
+<div *ngIf="messageService.messages.length">
+
+  <h2>Messages</h2> <button class="clear" (click)="messageService.clear()">clear</button>
+  <div *ngFor='let message of messageService.messages'>
+    {{message}}
+  </div>
+
+  <!--<p style="margin-left: 2.5em;padding: 0 7em 2em 0;
+    border-width: 2px; border-color: black; border-style:solid;">Example of a paragraph with margin and padding.</p>
+  Vollständiges Beispielt für umrandung und verschiebung des elements-->
+
+</div>

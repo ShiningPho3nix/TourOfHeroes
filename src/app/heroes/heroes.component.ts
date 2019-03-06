@@ -30,6 +30,20 @@ export class HeroesComponent implements OnInit {
      Im prinzip wird das durch heroservice erhaltene heroes array in this.heroes geschrieben.*/
   }
 
+  add(name: string): void {
+    name = name.trim(); // Whitespaces entfernen.
+    if (!name) { return; };
+    this.heroService.addHero({ name } as Hero) // muss name sein, kann nicht wie von mir ursprünglich heroName sein, da das feld in der Hero klasse name heißt.
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      });
+  }
+
+  deleteHero(hero: Hero): void{
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
+  }
+
   ngOnInit() {
     this.getHeroes();
   }

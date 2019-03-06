@@ -18,9 +18,12 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 17, name: 'Dynama' },
       { id: 18, name: 'Dr IQ' },
       { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 20, name: 'Tornado' },
+      { id: 69420666, name: 'Gott Steffen' },
+
     ];
-    return { heroesDataObject };
+    const dataobj2 = []; // unnötig und nur zum testen erinner drin, sollte man mehr als eine db brauchen.
+    return { heroesDataObject, dataobj2 };
   }
 
   // Overrides the genId method to ensure that a hero always has an id.

@@ -19,3 +19,10 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
 }
+
+div a {
+    margin-top: 3px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 4px;
+}

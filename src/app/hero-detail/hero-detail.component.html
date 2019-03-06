@@ -1,5 +1,4 @@
 <div *ngIf="hero">
-  <!--When selectedHero is undefined, the ngIf removes the hero detail from the DOM. There are no selectedHero bindings to worry about. When the user picks a hero, selectedHero has a value and ngIf puts the hero detail into the DOM.-->
   <h2>{{hero.name | uppercase}} Details</h2>
   <div>ID:<span class="detailBadge">{{hero.id}}</span></div>
   <div>
@@ -8,4 +7,7 @@
     </label>
   </div>
 </div>
-<button (click)="goBack()">Go Back</button>
+<div>
+  <a><button (click)="save()">Save</button> </a>
+  <a><button (click)="goBack()">Go Back</button></a>
+</div>
